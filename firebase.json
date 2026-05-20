@@ -1,15 +1,12 @@
 {
   "hosting": {
     "public": "out",
-    "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**"
-    ],
-    "rewrites": [
+    "cleanUrls": true,
+    "redirects": [
       {
-        "source": "**",
-        "destination": "/index.html"
+        "source": "/**",
+        "destination": "https://judielle.vercel.app",
+        "type": 301
       }
     ]
   }

@@ -184,7 +184,7 @@ export default function About() {
                 </svg>
               </div>
 
-              <div className="absolute glass-card rounded-2xl p-4" style={{ width: "170px", bottom: "48px", right: "-20px" }}>
+              <div className="absolute glass-card rounded-2xl p-4" style={{ width: "160px", bottom: "48px", right: "-18px" }}>
                 <div className="flex items-center gap-2 mb-2">
                   <TulipSVG variant="decorative" size={20} />
                   <span className="text-xs text-cream/60 font-light">Certified VA</span>
@@ -205,7 +205,7 @@ export default function About() {
                 <div className="h-px w-12 bg-gradient-to-r from-transparent to-[#c8748a]" />
                 <span className="text-xs tracking-[0.3em] uppercase text-[#d4a0bc] font-light">About Me</span>
               </div>
-              <h2 className="reveal text-5xl md:text-6xl font-light text-cream leading-tight" style={{ fontFamily: "var(--font-cormorant)" }}>
+              <h2 className="reveal text-4xl sm:text-5xl md:text-6xl font-light text-cream leading-tight" style={{ fontFamily: "var(--font-cormorant)" }}>
                 Behind the{" "}
                 <span className="text-gradient-tulip italic font-semibold">petals</span>
               </h2>
@@ -230,9 +230,9 @@ export default function About() {
                 { value: "2≈", label: "Years Experience" },
               ].map((stat, i) => (
                 <>
-                  <div key={stat.label} className="space-y-1 px-6 first:pl-0">
-                    <p className="text-3xl font-semibold text-gradient-tulip" style={{ fontFamily: "var(--font-cormorant)" }}>{stat.value}</p>
-                    <p className="text-xs text-cream/40 tracking-wider uppercase">{stat.label}</p>
+                  <div key={stat.label} className="space-y-1 px-3 sm:px-6 first:pl-0 min-w-0">
+                    <p className="text-2xl sm:text-3xl font-semibold text-gradient-tulip" style={{ fontFamily: "var(--font-cormorant)" }}>{stat.value}</p>
+                    <p className="text-[10px] sm:text-xs text-cream/40 tracking-wider uppercase leading-tight">{stat.label}</p>
                   </div>
                   {i < 2 && (
                     <div key={`divider-${i}`} className="flex flex-col items-center gap-1 px-1 opacity-40">

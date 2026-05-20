@@ -287,9 +287,9 @@ export default function Contact() {
                 <span className="text-sm font-medium text-cream/80" style={{ fontFamily: "var(--font-cormorant)", fontSize: "16px" }}>Starting Packages</span>
               </div>
               {[
-                { name: "Bud", hours: "10 hrs/month", price: "$150" },
-                { name: "Bloom", hours: "20 hrs/month", price: "$260" },
-                { name: "Bouquet", hours: "40 hrs/month", price: "$480" },
+                { name: "Bud", hours: "per hour", price: "$3-5" },
+                { name: "Bloom", hours: "20 hrs/week", price: "$80" },
+                { name: "Bouquet", hours: "40 hrs/month", price: "$170" },
               ].map((pkg) => (
                 <div key={pkg.name} className="flex justify-between items-center py-2 border-b border-[rgba(197,174,237,0.08)] last:border-0">
                   <div>
