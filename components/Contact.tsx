@@ -361,7 +361,7 @@ export default function Contact() {
               )}
 
               <p className="text-center text-xs text-cream/25 font-light">
-                I'll respond within 24 hours. No spam, ever.
+                I'll respond within 24 hours.
               </p>
             </form>
           </div>
