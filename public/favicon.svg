@@ -1,0 +1,20 @@
+<svg width="32" height="32" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Dark purple background circle -->
+  <circle cx="40" cy="40" r="38" fill="#2d1b4e" />
+
+  <!-- Stem -->
+  <line x1="40" y1="70" x2="40" y2="46" stroke="#6a9a5a" stroke-width="2" stroke-linecap="round" />
+
+  <!-- Leaves -->
+  <path d="M40 58 Q32 54 30 45 Q29 38 34 36 Q38 34 40 42" fill="#5a8a4a" opacity="0.9" />
+  <path d="M40 55 Q48 51 50 42 Q51 35 46 33 Q42 31 40 39" fill="#5a8a4a" opacity="0.8" />
+
+  <!-- Center petal - pink -->
+  <path d="M40 46 Q32 40 30 30 Q28 22 34 18 Q38 15 40 24 Q42 15 46 18 Q52 22 50 30 Q48 40 40 46Z" fill="#e89ab5" />
+
+  <!-- Left petal - purple -->
+  <path d="M40 46 Q28 42 24 33 Q21 25 27 20 Q33 16 38 26" fill="#c5aeed" opacity="0.9" />
+
+  <!-- Right petal - purple -->
+  <path d="M40 46 Q52 42 56 33 Q59 25 53 20 Q47 16 42 26" fill="#c5aeed" opacity="0.9" />
+</svg>
