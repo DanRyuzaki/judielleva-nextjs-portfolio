@@ -179,7 +179,6 @@ export default function Services() {
                   {service.svg}
                 </div>
               </div>
-         
 
               <h3
                 className="text-xl font-medium text-cream mb-3 leading-snug"
