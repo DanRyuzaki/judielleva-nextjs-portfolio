@@ -91,7 +91,9 @@ function CustomIcon({ name }: { name: string }) {
 }
 
 function ToolChip({ tool }: { tool: { name: string; icon: string | null } }) {
-  const [iconFailed, setIconFailed] = useState(false);
+  const [iconStatus, setIconStatus] = useState<"loading" | "loaded" | "failed">(
+    tool.icon ? "loading" : "failed"
+  );
   const hasCustom = Boolean(customSvgPaths[tool.name]);
 
   return (
@@ -103,21 +105,29 @@ function ToolChip({ tool }: { tool: { name: string; icon: string | null } }) {
         color: "rgba(245,240,232,0.65)",
       }}
     >
-
-      {tool.icon && !iconFailed && (
+      {/* SimpleIcons CDN image — hidden until confirmed loaded, avoids broken-image flash */}
+      {tool.icon && (
         <img
           src={`https://cdn.simpleicons.org/${tool.icon}/c5aeed`}
           alt=""
           width="12"
           height="12"
-          style={{ opacity: 0.85, flexShrink: 0 }}
-          onError={() => setIconFailed(true)}
+          style={{
+            flexShrink: 0,
+            opacity: iconStatus === "loaded" ? 0.85 : 0,
+            width: iconStatus === "loaded" ? "12px" : "0px",
+            transition: "opacity 0.15s ease",
+          }}
+          onLoad={() => setIconStatus("loaded")}
+          onError={() => setIconStatus("failed")}
         />
       )}
 
-      {(!tool.icon || iconFailed) && hasCustom && (
+      {/* Custom SVG fallback — shows when CDN fails or no icon slug provided */}
+      {iconStatus === "failed" && hasCustom && (
         <CustomIcon name={tool.name} />
       )}
+
       {tool.name}
     </span>
   );
@@ -183,14 +193,10 @@ export default function About() {
                   <path d="M36 4 L36 36 L4 36" stroke="#c8748a" strokeWidth="1.5" fill="none" strokeLinecap="round" />
                 </svg>
               </div>
-
-              <div className="absolute glass-card rounded-2xl p-4" style={{ width: "160px", bottom: "48px", right: "-18px" }}>
-                <div className="flex items-center gap-2 mb-2">
-                  <TulipSVG variant="decorative" size={20} />
-                  <span className="text-xs text-cream/60 font-light">Certified VA</span>
-                </div>
-                <p className="text-xs text-cream/40">International VA Association Member</p>
-              </div>
+ <div className="absolute glass-card rounded-2xl p-4" style={{ width: "160px", bottom: "48px", right: "-18px" }}>
+  <div className="flex items-center gap-2 mb-2">                    <TulipSVG variant="decorative" size={20} />                    <span className="text-xs text-cream/60 font-light">Certified VA</span>                  </div>
+ <p className="text-xs text-cream/40">International VA Association Member</p>
+ </div>
 
               <div className="absolute -top-4 -left-4 glass-card rounded-2xl p-4 text-center" style={{ width: "110px" }}>
                 <p className="text-3xl font-semibold text-gradient-tulip" style={{ fontFamily: "var(--font-cormorant)" }}>2+</p>
