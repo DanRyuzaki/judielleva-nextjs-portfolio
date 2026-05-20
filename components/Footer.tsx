@@ -17,9 +17,9 @@ const footerLinks: Record<string, { label: string; href: string }[]> = {
     { label: "Contact", href: "#contact" },
   ],
   Social: [
-    { label: "LinkedIn", href: "https://www.linkedin.com/in/YOUR_PROFILE" },
-    { label: "Facebook", href: "https://www.facebook.com/YOUR_PROFILE" },
-    { label: "OnlineJobs.ph", href: "https://www.onlinejobs.ph/jobseekers/info/YOUR_ID" },
+    { label: "LinkedIn", href: "https://www.linkedin.com/in/judielle-villacrusis-42a03a365/" },
+    { label: "Facebook", href: "https://www.facebook.com/judiellerovie.villacrusis.5" },
+    { label: "OnlineJobs.ph", href: "https://v2.onlinejobs.ph/jobseekers/info/4942591" },
   ],
 };
 
