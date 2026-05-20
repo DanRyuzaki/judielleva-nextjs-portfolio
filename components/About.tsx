@@ -105,7 +105,7 @@ function ToolChip({ tool }: { tool: { name: string; icon: string | null } }) {
         color: "rgba(245,240,232,0.65)",
       }}
     >
-      {/* SimpleIcons CDN image — hidden until confirmed loaded, avoids broken-image flash */}
+      
       {tool.icon && (
         <img
           src={`https://cdn.simpleicons.org/${tool.icon}/c5aeed`}
@@ -123,7 +123,7 @@ function ToolChip({ tool }: { tool: { name: string; icon: string | null } }) {
         />
       )}
 
-      {/* Custom SVG fallback — shows when CDN fails or no icon slug provided */}
+      
       {iconStatus === "failed" && hasCustom && (
         <CustomIcon name={tool.name} />
       )}
